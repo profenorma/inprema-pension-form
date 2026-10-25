@@ -6,21 +6,22 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 10.5pt;
-  line-height: 1.45;
+  font-size: 9.5pt;
+  line-height: 1.4;
   color: #000;
   background-color: #e5e5e5;
   padding: 20px 0;
 }
 
-/* Floating Toolbar for Printing */
 .toolbar {
   max-width: 8.5in;
   margin: 0 auto 15px auto;
   display: flex;
   justify-content: flex-end;
+  gap: 10px;
 }
-.btn-print {
+
+.btn-nav, .btn-print {
   background-color: #2b3a4a;
   color: #fff;
   border: none;
@@ -29,94 +30,90 @@ body {
   font-weight: bold;
   border-radius: 4px;
   cursor: pointer;
+  text-decoration: none;
 }
-.btn-print:hover {
+
+.btn-nav:hover, .btn-print:hover {
   background-color: #1a252f;
 }
 
-/* Page Container - Letter/Oficio Layout Matching the Photo */
 .page {
   width: 8.5in;
   min-height: 11in;
   margin: 0 auto;
   background: #ffffff;
-  padding: 0.6in 0.8in;
+  padding: 0.5in 0.7in;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  position: relative;
 }
 
-/* Top Header Grid */
-.header-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-bottom: 8px;
+/* Header Table / Grid with Two Vertical Bars */
+.header-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 6px;
 }
 
-.logo-section {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.header-table td {
+  vertical-align: middle;
+  padding: 4px 8px;
+}
+
+.col-logo {
+  width: 22%;
+  text-align: center;
 }
 
 .logo-img {
-  height: 48px;
+  max-height: 45px;
   width: auto;
 }
 
-.logo-text {
-  font-weight: bold;
-  font-size: 10pt;
-  border-left: 1.5px solid #000;
-  padding-left: 8px;
-  line-height: 1.2;
-}
-
-.header-center {
+.col-center {
+  width: 58%;
   text-align: center;
-  flex-grow: 1;
-  padding: 0 15px;
+  border-left: 1.5px solid #000;
+  border-right: 1.5px solid #000;
 }
 
-.header-center h1 {
-  font-size: 11pt;
+.col-center h1 {
+  font-size: 9.5pt;
   font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: 0.2px;
+  text-decoration: underline;
+  margin-bottom: 2px;
 }
 
-.header-center h2 {
-  font-size: 10.5pt;
+.col-center h2 {
+  font-size: 9.5pt;
   font-weight: bold;
-  margin-top: 4px;
   text-transform: uppercase;
 }
 
-.doc-id {
-  font-size: 10pt;
+.col-right {
+  width: 20%;
+  text-align: right;
   font-weight: bold;
-  white-space: nowrap;
-  align-self: flex-end;
-  padding-bottom: 4px;
+  font-size: 9.5pt;
 }
 
-.dotted-line {
+.dotted-divider {
   border-top: 1.5px dotted #000;
-  margin: 8px 0 16px 0;
+  margin: 6px 0 12px 0;
 }
 
 .sub-title {
   text-align: center;
   font-weight: bold;
-  font-size: 10.5pt;
-  margin-bottom: 18px;
+  font-size: 10pt;
+  margin-bottom: 14px;
   text-transform: uppercase;
 }
 
-/* Document Body Text */
 .recipient-block {
-  margin-bottom: 16px;
-  font-size: 10pt;
-  line-height: 1.35;
+  margin-bottom: 12px;
+  font-size: 9.5pt;
+  line-height: 1.3;
 }
 
 .recipient-block strong {
@@ -124,23 +121,23 @@ body {
 }
 
 p.body-text {
-  text-align: justify;
-  margin-bottom: 14px;
-  text-justify: inter-word;
+  text-align: left;
+  margin-bottom: 12px;
 }
 
-/* Underlined Inline Form Fields */
+/* Flexible Inline Underlines */
 .blank-field {
   display: inline-block;
   border: none;
   border-bottom: 1px solid #000;
   outline: none;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 10.5pt;
-  color: #000080;
+  font-size: 9.5pt;
+  color: #000;
   font-weight: 600;
-  padding: 0 2px;
+  padding: 0 3px;
   background: transparent;
+  vertical-align: baseline;
 }
 
 select.blank-field {
@@ -151,37 +148,35 @@ select.blank-field {
   border-radius: 0;
 }
 
-/* Sections & Lists */
 .section-title {
   text-align: center;
   font-weight: bold;
-  font-size: 10.5pt;
+  font-size: 9.5pt;
   text-decoration: underline;
-  margin: 16px 0 10px 0;
+  margin: 14px 0 8px 0;
   text-transform: uppercase;
 }
 
 ol.hechos-list {
-  padding-left: 24px;
-  margin-bottom: 14px;
+  padding-left: 20px;
+  margin-bottom: 12px;
 }
 
 ol.hechos-list li {
-  text-align: justify;
-  margin-bottom: 8px;
+  text-align: left;
+  margin-bottom: 6px;
   padding-left: 4px;
 }
 
 .peticion-notice {
-  text-align: justify;
+  text-align: left;
   font-weight: bold;
-  font-size: 9.5pt;
+  font-size: 8.5pt;
   text-decoration: underline;
-  margin-top: 10px;
-  line-height: 1.4;
+  margin-top: 8px;
+  line-height: 1.35;
 }
 
-/* Print Rules */
 @media print {
   body {
     background: none;
@@ -197,10 +192,10 @@ ol.hechos-list li {
     box-shadow: none;
   }
   .blank-field {
-    color: #000 !important;
+    border-bottom: 1px solid #000 !important;
   }
   @page {
     size: letter portrait;
-    margin: 0.6in 0.8in;
+    margin: 0.5in 0.7in;
   }
 }
