@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OPS-01-F02 | Solicitud de Pensión por Vejez - INPREMA</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div class="toolbar">
+    <div>
+      <h1>INPREMA - Solicitud de Pensión por Vejez</h1>
+      <small style="color: #ccc;">Formulario Oficial OPS-01-F02</small>
+    </div>
+    <button class="btn" onclick="window.print()">🖨️ Imprimir / Guardar a PDF</button>
+  </div>
+
+  <div class="page">
+    
+    <div class="header-grid">
+      <div class="institution-info">
+        <h2>INPREMA</h2>
+        <h3>INSTITUTO NACIONAL DE PREVISIÓN DEL MAGISTERIO</h3>
+        <p style="font-size: 10pt; font-weight: bold; margin-top: 5px;">SOLICITUD DE PENSIÓN POR VEJEZ</p>
+      </div>
+      <div class="doc-id-box">
+        OPS-01-F02
+      </div>
+    </div>
+
+    <div class="doc-title">
+      SE SOLICITA PENSIÓN POR VEJEZ
+    </div>
+
+    <p>
+      <strong>Señores</strong><br>
+      <strong>Comisión Interventora</strong><br>
+      <strong>Instituto Nacional de Previsión del Magisterio.</strong><br>
+      <strong>INPREMA</strong>
+    </p>
+
+    <br>
+
+    <p>
+      Yo, <input type="text" id="nombre" placeholder="________________________________________" style="width: 320px;">, 
+      mayor de edad, <input type="text" id="estadoCivil" placeholder="__________________" style="width: 140px;"> (estado civil), 
+      <select id="tituloProfesor">
+        <option value="Maestro(a) de Educación Primaria">Maestro(a) de Educación Primaria</option>
+        <option value="Profesor(a) de Educación Media">Profesor(a) de Educación Media</option>
+      </select>, Tarjeta de Identidad No. <input type="text" id="identidad" placeholder="____-____-_____" style="width: 160px;">, 
+      Libreta de Ahorro del Banco <input type="text" id="bancoNombre" placeholder="________________" style="width: 150px;"> 
+      No. <input type="text" id="bancoCuenta" placeholder="____________________" style="width: 160px;"> y con domicilio en 
+      <input type="text" id="domicilio" placeholder="____________________________________________________________________________________" style="width: 100%;">, 
+      del Municipio de <input type="text" id="municipio" placeholder="__________________" style="width: 160px;">, 
+      Departamento de <input type="text" id="departamento" placeholder="__________________" style="width: 160px;">, 
+      con el debido respeto comparezco solicitando el Beneficio de <strong>PENSIÓN POR VEJEZ</strong>, basándome en los hechos y consideraciones legales siguientes:
+    </p>
+
+    <div class="section-header">HECHOS</div>
+
+    <div class="loan-toggle-container">
+      <label>
+        <input type="checkbox" id="tienePrestamo" onchange="togglePrestamoNumeral()" checked>
+        ¿Tiene préstamos pendientes con INPREMA? (Incluye/Excluye el Numeral 3)
+      </label>
+    </div>
+
+    <ol>
+      <li>
+        Tengo <input type="text" id="edad" placeholder="____" style="width: 50px;"> años de edad y soy originario de 
+        <input type="text" id="origen" placeholder="________________________________________" style="width: 300px;"> (Municipio y Departamento).
+      </li>
+      <li>
+        He prestado mis servicios profesionales en el Campo de la Educación Nacional por espacio de 
+        <input type="text" id="aniosServicio" placeholder="____" style="width: 50px;"> años, extremo que acredito con la(s) Certificación(es) de Trabajo emitida(s) por 
+        <input type="text" id="certificacionEmitida" placeholder="________________________________________________" style="width: 350px;">.
+      </li>
+      
+      <li id="numeral3">
+        En vista de tener Préstamo(s) con el Instituto, autorizo al mismo para que del monto de mi Pensión, se haga(n) la(s) deducción(es) correspondiente(s), hasta la cancelación total del (de los) préstamo(s) que tengo pendiente(s) con esta Institución, aun si dicha obligación afectara más del 40% del monto de mi pensión.
+      </li>
+
+      <li>
+        No cuento actualmente con una Jubilación/Pensión por Vejez/Invalidez principal por otro Instituto de Previsión.
+      </li>
+
+      <li>
+        Ratifico que, mediante la presente solicitud me doy por entendido que el beneficio de Pensión por Vejez será mi pensión principal.
+      </li>
+
+      <li>
+        Autorizo a que el monto de mi beneficio sea acreditado a la cuenta de ahorro número 
+        <input type="text" id="cuentaAcreditar" placeholder="XXXXXX" style="width: 160px;">, del Banco 
+        <input type="text" id="bancoAcreditar" placeholder="XXXXXX" style="width: 160px;">.
+      </li>
+    </ol>
+
+    <div class="section-header">FUNDAMENTOS DE DERECHO</div>
+    <p>
+      Baso mi solicitud en los Artículos: 80 de la Constitución de la República, 47 párrafo primero; 48 numeral 1; 51, 52, 53, 54, 55, 78 párrafos primero y segundo; 80 numerales 1 y 2, y párrafo segundo; 81, 84, 91 párrafo primero; 121 y 125 de la Ley del Instituto Nacional de Previsión del Magisterio y demás aplicables al caso.
+    </p>
+
+    <div class="section-header">PETICIÓN</div>
+    <p>
+      Atentamente pido: Admitir la presente solicitud junto con la documentación que se acompaña, darle el trámite correspondiente y en su oportunidad resolver favorablemente resolviendo el beneficio de Pensión por Vejez.
+    </p>
+
+    <br><br>
+
+    <p style="text-align: center;">
+      ____________________________________________________<br>
+      <strong>Firma del Solicitante</strong>
+    </p>
+
+    <div class="notice-box">
+      <strong>NOTA:</strong> LA SOLICITUD DEBERÁ PRESENTARSE EN PAPEL BOND TAMAÑO OFICIO CONFORME A ESTE FORMATO, EL TRÁMITE ES PERSONAL Y NO SE REQUIERE DE APODERADO LEGAL. LA PRESENTE SOLICITUD DEBERÁ DE SER TRANSCRITA A PARTIR DE LA LÍNEA PUNTEADA, EN DONDE DICE: SE SOLICITA...
+      <div class="dotted-divider"></div>
+    </div>
+
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
