@@ -3,119 +3,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OPS-01-F02 | Solicitud de Pensión por Vejez - INPREMA</title>
+  <title>OPS-01-F02 - INPREMA</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
   <div class="toolbar">
-    <div>
-      <h1>INPREMA - Solicitud de Pensión por Vejez</h1>
-      <small style="color: #ccc;">Formulario Oficial OPS-01-F02</small>
-    </div>
-    <button class="btn" onclick="window.print()">🖨️ Imprimir / Guardar a PDF</button>
+    <button class="btn-print" onclick="window.print()">🖨️ Imprimir / Guardar a PDF</button>
   </div>
 
   <div class="page">
     
-    <div class="header-grid">
-      <div class="institution-info">
-        <h2>INPREMA</h2>
-        <h3>INSTITUTO NACIONAL DE PREVISIÓN DEL MAGISTERIO</h3>
-        <p style="font-size: 10pt; font-weight: bold; margin-top: 5px;">SOLICITUD DE PENSIÓN POR VEJEZ</p>
+    <!-- Top Header -->
+    <div class="header-container">
+      <div class="logo-section">
+        <img class="logo-img" src="https://images.seeklogo.com/logo-png/20/1/inprema-logo-png_seeklogo-208592.png" alt="INPREMA Logo">
       </div>
-      <div class="doc-id-box">
+      <div class="header-center">
+        <h1>INSTITUTO NACIONAL DE PREVISIÓN DEL MAGISTERIO</h1>
+        <h2>SOLICITUD DE PENSIÓN POR VEJEZ</h2>
+      </div>
+      <div class="doc-id">
         OPS-01-F02
       </div>
     </div>
 
-    <div class="doc-title">
-      SE SOLICITA PENSIÓN POR VEJEZ
+    <div class="dotted-line"></div>
+
+    <div class="sub-title">
+      SE SOLICITA PENSION POR VEJEZ
     </div>
 
-    <p>
-      <strong>Señores</strong><br>
-      <strong>Comisión Interventora</strong><br>
-      <strong>Instituto Nacional de Previsión del Magisterio.</strong><br>
+    <!-- Recipient -->
+    <div class="recipient-block">
+      <strong>Señores</strong>
+      <strong>Comisión Interventora</strong>
+      <strong>Instituto Nacional de Previsión del Magisterio.</strong>
       <strong>INPREMA</strong>
-    </p>
-
-    <br>
-
-    <p>
-      Yo, <input type="text" id="nombre" placeholder="________________________________________" style="width: 320px;">, 
-      mayor de edad, <input type="text" id="estadoCivil" placeholder="__________________" style="width: 140px;"> (estado civil), 
-      <select id="tituloProfesor">
-        <option value="Maestro(a) de Educación Primaria">Maestro(a) de Educación Primaria</option>
-        <option value="Profesor(a) de Educación Media">Profesor(a) de Educación Media</option>
-      </select>, Tarjeta de Identidad No. <input type="text" id="identidad" placeholder="____-____-_____" style="width: 160px;">, 
-      Libreta de Ahorro del Banco <input type="text" id="bancoNombre" placeholder="________________" style="width: 150px;"> 
-      No. <input type="text" id="bancoCuenta" placeholder="____________________" style="width: 160px;"> y con domicilio en 
-      <input type="text" id="domicilio" placeholder="____________________________________________________________________________________" style="width: 100%;">, 
-      del Municipio de <input type="text" id="municipio" placeholder="__________________" style="width: 160px;">, 
-      Departamento de <input type="text" id="departamento" placeholder="__________________" style="width: 160px;">, 
-      con el debido respeto comparezco solicitando el Beneficio de <strong>PENSIÓN POR VEJEZ</strong>, basándome en los hechos y consideraciones legales siguientes:
-    </p>
-
-    <div class="section-header">HECHOS</div>
-
-    <div class="loan-toggle-container">
-      <label>
-        <input type="checkbox" id="tienePrestamo" onchange="togglePrestamoNumeral()" checked>
-        ¿Tiene préstamos pendientes con INPREMA? (Incluye/Excluye el Numeral 3)
-      </label>
     </div>
 
-    <ol>
-      <li>
-        Tengo <input type="text" id="edad" placeholder="____" style="width: 50px;"> años de edad y soy originario de 
-        <input type="text" id="origen" placeholder="________________________________________" style="width: 300px;"> (Municipio y Departamento).
-      </li>
-      <li>
-        He prestado mis servicios profesionales en el Campo de la Educación Nacional por espacio de 
-        <input type="text" id="aniosServicio" placeholder="____" style="width: 50px;"> años, extremo que acredito con la(s) Certificación(es) de Trabajo emitida(s) por 
-        <input type="text" id="certificacionEmitida" placeholder="________________________________________________" style="width: 350px;">.
-      </li>
-      
-      <li id="numeral3">
-        En vista de tener Préstamo(s) con el Instituto, autorizo al mismo para que del monto de mi Pensión, se haga(n) la(s) deducción(es) correspondiente(s), hasta la cancelación total del (de los) préstamo(s) que tengo pendiente(s) con esta Institución, aun si dicha obligación afectara más del 40% del monto de mi pensión.
-      </li>
+    <!-- Preamble -->
+    <p class="body-text">
+      Yo, <input type="text" class="blank-field" id="nombre" style="width: 260px;">, mayor de edad, (<input type="text" class="blank-field" id="estadoCivil" placeholder="estado civil" style="width: 110px;">), (<select class="blank-field" id="tituloProfesor">
+        <option value="Maestro(a) de Educación Primaria">Maestro(a) de Educación Primaria</option>
+        <option value="Profesor (a) de Educación Media">Profesor (a) de Educación Media</option>
+      </select>, SEGÚN SEA EL CASO), Tarjeta de Identidad No.<input type="text" class="blank-field" id="identidad" style="width: 150px;">, Libreta de Ahorro del Banco <input type="text" class="blank-field" id="bancoNombre" style="width: 130px;"> No.<input type="text" class="blank-field" id="bancoCuenta" style="width: 140px;"> y con domicilio en (<input type="text" class="blank-field" id="domicilio" placeholder="Dirección Completa, o un punto de referencia, ya sea un edificio público y/o un negocio cercano a su residencia." style="width: 98%;">), del Municipio de <input type="text" class="blank-field" id="municipio" style="width: 140px;"> Departamento de <input type="text" class="blank-field" id="departamento" style="width: 140px;"> ; con el debido respeto comparezco solicitando el Beneficio de PENSION POR VEJEZ, basándome en los hechos y consideraciones legales siguientes:
+    </p>
 
+    <!-- HECHOS -->
+    <div class="section-title">HECHOS</div>
+
+    <ol class="hechos-list">
+      <li>
+        Tengo <input type="text" class="blank-field" id="edad" style="width: 45px;"> años de edad y soy originario de <input type="text" class="blank-field" id="origen" placeholder="(Municipio y Departamento)" style="width: 250px;">.
+      </li>
+      <li>
+        He prestado mis servicios profesionales en el Campo de la Educación Nacional por espacio de <input type="text" class="blank-field" id="aniosServicio" style="width: 45px;"> años, extremo que acredito con la(s) Certificación (es) de Trabajo emitida(s) por <input type="text" class="blank-field" id="certificacionEmitida" style="width: 320px;">.
+      </li>
+      <li>
+        En vista de tener Préstamo(s) con el Instituto, autorizo al mismo para que del monto de mi Pensión, se haga (n) la (s) deducción (es) correspondiente (s), hasta la cancelación total del (de los) préstamo (s) que tengo pendiente (s) con esta Institución, aun si dicha obligación afectara más del 40% del monto de mi pensión. (Incluir este numeral si el solicitante tiene préstamos con el INPREMA, si no es así, NO SE COLOCA ESTA INFORMACION.)
+      </li>
       <li>
         No cuento actualmente con una Jubilación/Pensión por Vejez/Invalidez principal por otro Instituto de Previsión.
       </li>
-
       <li>
         Ratifico que, mediante la presente solicitud me doy por entendido que el beneficio de Pensión por Vejez será mi pensión principal.
       </li>
-
       <li>
-        Autorizo a que el monto de mi beneficio sea acreditado a la cuenta de ahorro número 
-        <input type="text" id="cuentaAcreditar" placeholder="XXXXXX" style="width: 160px;">, del Banco 
-        <input type="text" id="bancoAcreditar" placeholder="XXXXXX" style="width: 160px;">.
+        Autorizo a que el monto de mi beneficio sea acreditado a la cuenta de ahorro número <input type="text" class="blank-field" id="cuentaAcreditar" placeholder="XXXXXX" style="width: 130px;">, del Banco <input type="text" class="blank-field" id="bancoAcreditar" placeholder="XXXXXX" style="width: 130px;">.
       </li>
     </ol>
 
-    <div class="section-header">FUNDAMENTOS DE DERECHO</div>
-    <p>
+    <!-- FUNDAMENTOS DE DERECHO -->
+    <div class="section-title">FUNDAMENTOS DE DERECHO</div>
+    <p class="body-text">
       Baso mi solicitud en los Artículos: 80 de la Constitución de la República, 47 párrafo primero; 48 numeral 1; 51, 52, 53, 54, 55, 78 párrafos primero y segundo; 80 numerales 1 y 2, y párrafo segundo; 81, 84, 91 párrafo primero; 121 y 125 de la Ley del Instituto Nacional de Previsión del Magisterio y demás aplicables al caso.
     </p>
 
-    <div class="section-header">PETICIÓN</div>
-    <p>
-      Atentamente pido: Admitir la presente solicitud junto con la documentación que se acompaña, darle el trámite correspondiente y en su oportunidad resolver favorablemente resolviendo el beneficio de Pensión por Vejez.
-    </p>
+    <!-- PETICIÓN -->
+    <div class="section-title">PETICIÓN</div>
 
-    <br><br>
-
-    <p style="text-align: center;">
-      ____________________________________________________<br>
-      <strong>Firma del Solicitante</strong>
-    </p>
-
-    <div class="notice-box">
-      <strong>NOTA:</strong> LA SOLICITUD DEBERÁ PRESENTARSE EN PAPEL BOND TAMAÑO OFICIO CONFORME A ESTE FORMATO, EL TRÁMITE ES PERSONAL Y NO SE REQUIERE DE APODERADO LEGAL. LA PRESENTE SOLICITUD DEBERÁ DE SER TRANSCRITA A PARTIR DE LA LÍNEA PUNTEADA, EN DONDE DICE: SE SOLICITA...
-      <div class="dotted-divider"></div>
+    <div class="peticion-notice">
+      NOTA: LA SOLICITUD DEBERÁ PRESENTARSE EN PAPEL BOND TAMAÑO OFICIO CONFORME A ESTE FORMATO, EL TRÁMITE ES PERSONAL Y NO SE REQUIERE DE APODERADO LEGAL. LA PRESENTE SOLICITUD DEBERÁ DE SER TRANSCRITA A PARTIR DE LA LÍNEA PUNTEADA, EN DONDE DICE: SE SOLICITA...
     </div>
 
   </div>
