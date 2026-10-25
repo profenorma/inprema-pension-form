@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OPS-01-F02 - Página 2</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div class="toolbar">
+    <a href="index.html" class="btn-nav">⬅️ Volver a Página 1</a>
+    <button class="btn-print" onclick="window.print()">🖨️ Imprimir Página 2</button>
+  </div>
+
+  <div class="page">
+    
+    <!-- Header with Two Vertical Bars -->
+    <table class="header-table">
+      <tr>
+        <td class="col-logo">
+          <img class="logo-img" src="https://images.seeklogo.com/logo-png/20/1/inprema-logo-png_seeklogo-208592.png" alt="INPREMA Logo">
+        </td>
+        <td class="col-center">
+          <h1>INSTITUTO NACIONAL DE PREVISIÓN DEL MAGISTERIO</h1>
+          <h2>SOLICITUD DE PENSIÓN POR VEJEZ</h2>
+        </td>
+        <td class="col-right">
+          OPS-01-F02
+        </td>
+      </tr>
+    </table>
+
+    <div class="dotted-divider"></div>
+
+    <!-- Continuación de Petición -->
+    <p class="body-text" style="margin-top: 15px;">
+      Admitir la presente solicitud junto con la documentación que se acompaña, darle el trámite
+    </p>
+    <p class="body-text">
+      correspondiente y en su oportunidad resolver favorablemente declarando con lugar el beneficio de Pensión por Vejez, por ser de justicia
+    </p>
+    <p class="body-text">
+      conforme a derecho.
+    </p>
+
+    <br>
+    <p class="body-text">
+      Lugar y fecha: <input type="text" class="blank-field" id="lugarFecha" placeholder="Ciudad, departamento y fecha" style="width: 320px;">
+    </p>
+
+    <br><br>
+    <p style="text-align: center;">
+      <input type="text" class="blank-field" id="nombreCompletoFirma" style="width: 380px; text-align: center;"><br>
+      <strong>Nombre Completo y Firma del Solicitante</strong>
+    </p>
+
+    <br>
+
+    <!-- Datos de Contacto -->
+    <div class="section-title">DATOS DE CONTACTO</div>
+    <table style="width: 100%; border-collapse: collapse; margin-bottom: 15px;">
+      <tr>
+        <td style="padding: 6px 0; width: 50%;">Teléfono Fijo 1: <input type="text" class="blank-field" id="telFijo1" style="width: 180px;"></td>
+        <td style="padding: 6px 0; width: 50%;">Fijo 2: <input type="text" class="blank-field" id="telFijo2" style="width: 200px;"></td>
+      </tr>
+      <tr>
+        <td style="padding: 6px 0;">Celular 1: <input type="text" class="blank-field" id="telCel1" style="width: 190px;"></td>
+        <td style="padding: 6px 0;">Celular 2: <input type="text" class="blank-field" id="telCel2" style="width: 200px;"></td>
+      </tr>
+      <tr>
+        <td colspan="2" style="padding: 6px 0;">Correo Electrónico: <input type="text" class="blank-field" id="correoElec" style="width: 350px;"></td>
+      </tr>
+    </table>
+
+    <!-- Datos Familiar Cercano o Contacto de Referencia -->
+    <div class="section-title">DATOS FAMILIAR CERCANO O CONTACTO DE REFERENCIA</div>
+    
+    <table class="grid-table">
+      <thead>
+        <tr>
+          <th style="width: 35%;">Nombre Completo</th>
+          <th style="width: 20%;">Parentesco</th>
+          <th style="width: 20%;">Teléfono</th>
+          <th style="width: 25%;">Dirección</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input type="text" class="grid-input" id="ref1_nombre"></td>
+          <td><input type="text" class="grid-input" id="ref1_parentesco"></td>
+          <td><input type="text" class="grid-input" id="ref1_tel"></td>
+          <td><input type="text" class="grid-input" id="ref1_dir"></td>
+        </tr>
+        <tr>
+          <td><input type="text" class="grid-input" id="ref2_nombre"></td>
+          <td><input type="text" class="grid-input" id="ref2_parentesco"></td>
+          <td><input type="text" class="grid-input" id="ref2_tel"></td>
+          <td><input type="text" class="grid-input" id="ref2_dir"></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
