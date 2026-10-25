@@ -47,7 +47,7 @@ body {
   position: relative;
 }
 
-/* Header Table with Two Vertical Bars and Top-Right OPS Code */
+/* Header Table: Perfectly Aligned to Match Physical Document */
 .header-table {
   width: 100%;
   border-collapse: collapse;
@@ -98,8 +98,8 @@ body {
   text-align: right;
   font-weight: bold;
   font-size: 9.5pt;
-  vertical-align: top;
-  padding-top: 2px;
+  vertical-align: bottom;
+  padding-bottom: 4px;
 }
 
 .dotted-divider {
